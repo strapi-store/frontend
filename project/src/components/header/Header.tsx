@@ -63,7 +63,7 @@ export function Header() {
             <div className="container p-3 max-w-7xl my-0 mx-auto">
                 <div className="flex justify-between items-center">
                     <Link className="logo" to={"/"}>
-                        <img className="max-w-14" src="/src/assets/logo.svg" alt="" />
+                        <img className="max-w-14" src="/assets/logo.svg" alt="" />
                     </Link>
                     <Search placeholder="Поиск по товарам" onSearch={onSearch} size="large" className="max-w-lg" />
                     <div className="flex">
@@ -71,14 +71,14 @@ export function Header() {
                             <Link className="title text-sm text-white" to={isAuth ? "/lk" : "/auth"}>Личный кабинет</Link>
                             <Link className="info text-xs text-text-gray" to={isAuth ? "/" : "/auth"} onClick={logout}>{isAuth ? "Выйти" : "Авторизуйтесь"}</Link>
                         </div>
-                        <img src="/src/assets/lk-icon-button.svg" alt="" className="" />
+                        <img src="/assets/lk-icon-button.svg" alt="" className="" />
                     </div >
                     <Link to="/basket" className="flex">
                         <div className="font-semibold mr-2.5">
                             <p className="title text-sm text-white">Корзина</p>
                             <p className="info text-xs text-text-gray">{`${basketCount} товар`}</p>
                         </div>
-                        <img src="/src/assets/basket-icon.svg" alt="" className="" />
+                        <img src="/assets/basket-icon.svg" alt="" className="" />
                     </Link >
                 </div>
             </div >
