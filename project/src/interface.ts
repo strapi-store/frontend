@@ -235,7 +235,7 @@ export interface ISlider {
 export interface IProductCardProps {
     imageUrl: string;
     title: string;
-    price: number;
+    price: string;
     id: number;
     countProduct: number;
 }

@@ -18,7 +18,7 @@ export const fetchOrders = createAsyncThunk(
     'orders/fetchOrders',
     async () => {
         try {
-            const data: IStrapi<IOrders> = await ky.get("https://necessary-morning-57a2ae1418.strapiapp.com/api/orders/?populate=*").json();
+            const data: IStrapi<IOrders> = await ky.get("https://sparkling-spirit-05e365a043.strapiapp.com//api/orders/?populate=*").json();
             return data.data;
         } catch (err) {
             console.log(err);
@@ -30,7 +30,7 @@ export const createOrder = createAsyncThunk(
     'orders/createOrder',
     async (newOrder: PostOrder) => {
         try {
-            const data: IOrders = await ky.post("https://necessary-morning-57a2ae1418.strapiapp.com/api/orders", { json: newOrder }).json();
+            const data: IOrders = await ky.post("https://sparkling-spirit-05e365a043.strapiapp.com//api/orders", { json: newOrder }).json();
             console.log(data)
             return data;
         } catch (err) {

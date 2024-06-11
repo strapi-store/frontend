@@ -30,7 +30,7 @@ export const authUser = createAsyncThunk(
     'user/authUser',
     async (user: AuthUser) => {
         try {
-            const data: IUserData = await ky.post("https://necessary-morning-57a2ae1418.strapiapp.com/api/auth/local", {
+            const data: IUserData = await ky.post("https://sparkling-spirit-05e365a043.strapiapp.com//api/auth/local", {
                 json: user
             }).json();
             localStorage.setItem('userData', JSON.stringify(data.user))
@@ -46,7 +46,7 @@ export const registerUser = createAsyncThunk(
     'user/registerUser',
     async (newUser: IUser) => {
         try {
-            const data: IUserData = await ky.post("https://necessary-morning-57a2ae1418.strapiapp.com/api/auth/local/register", { json: newUser }).json();
+            const data: IUserData = await ky.post("https://sparkling-spirit-05e365a043.strapiapp.com//api/auth/local/register", { json: newUser }).json();
             console.log(data)
             return data;
         } catch (err) {
@@ -59,7 +59,7 @@ export const updateUserData = createAsyncThunk(
     'user/registerUser',
     async (userData: UpdateUserData) => {
         try {
-            const data: IUserData = await ky.post("https://necessary-morning-57a2ae1418.strapiapp.com/api/auth/local/change-password", { json: userData, headers: myHeaders }).json();
+            const data: IUserData = await ky.post("https://sparkling-spirit-05e365a043.strapiapp.com//api/auth/local/change-password", { json: userData, headers: myHeaders }).json();
             console.log(data)
             return data;
         } catch (err) {
