@@ -9,7 +9,7 @@ export const fetchCategories = createAsyncThunk(
     'categories/fetchCategories',
     async () => {
         try {
-            const data: IStrapi<ICategory> = await ky.get("https://sparkling-spirit-05e365a043.strapiapp.com//api/categories?populate[products][populate][gallery][fields][0]=%2A&populate[products][populate][avatar][fields][0]=%2A&populate[categoryImage][fields][0]=%2A", {
+            const data: IStrapi<ICategory> = await ky.get("https://sparkling-spirit-05e365a043.strapiapp.com/api/categories?populate[products][populate][gallery][fields][0]=%2A&populate[products][populate][avatar][fields][0]=%2A&populate[categoryImage][fields][0]=%2A", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

@@ -9,7 +9,7 @@ export const fetchProducts = createAsyncThunk(
     'products/fetchProducts',
     async () => {
         try {
-            const data: IStrapi<IProduct> = await ky.get("https://sparkling-spirit-05e365a043.strapiapp.com//api/products?populate=*", {
+            const data: IStrapi<IProduct> = await ky.get("https://sparkling-spirit-05e365a043.strapiapp.com/api/products?populate=*", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

@@ -9,7 +9,7 @@ export const fetchSliders = createAsyncThunk(
     'sliders/fetchSliders',
     async () => {
         try {
-            const data: IStrapi<ISlider> = await ky.get("https://sparkling-spirit-05e365a043.strapiapp.com//api/banners?populate=*", {
+            const data: IStrapi<ISlider> = await ky.get("https://sparkling-spirit-05e365a043.strapiapp.com/api/banners?populate=*", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
